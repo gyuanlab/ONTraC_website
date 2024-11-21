@@ -33,5 +33,6 @@ Running ONTraC
     ONTraC --meta-input data/stereo_seq_brain/original_data.csv --NN-dir output/stereo_seq_NN --GNN-dir output/stereo_seq_GNN --NT-dir output/stereo_seq_NT --device cuda -s 42 --lr 0.03 --hidden-feats 4 -k 6 --modularity-loss-weight 0.3 --regularization-loss-weight 0.1 --purity-loss-weight 300 --beta 0.03 2>&1 | tee log/stereo_seq.log
 
 
-The input dataset and output files could be downloaded from .. _Zenodo: https://zenodo.org/records/11186620
+The input dataset and output files could be downloaded from `Zenodo <https://zenodo.org/records/11186620>`_
+
 
