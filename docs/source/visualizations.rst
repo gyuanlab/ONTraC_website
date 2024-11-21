@@ -55,7 +55,7 @@ Spatial niche cluster loadings distribution
     fig.savefig('figures/Spatial_niche_clustering_loadings.png', dpi=100)
 
 .. image:: images/Spatial_niche_clustering_loadings.png
-  :width: 400
+  :width: 600
   :alt: Spatial niche clustering loadings
 
 
@@ -70,7 +70,7 @@ Spatial maximum niche cluster distribution
     fig.savefig('figures/Spatial_max_niche_cluster.png', dpi=300)
 
 .. image:: images/Spatial_max_niche_cluster.png
-  :width: 400
+  :width: 600
   :alt: Spatial maximum niche cluster distribution
 
 
@@ -85,7 +85,7 @@ Niche cluster connectivity
     fig.savefig('figures/Niche_cluster_connectivity.png', dpi=300)
 
 .. image:: images/Niche_cluster_connectivity.png
-  :width: 400
+  :width: 600
   :alt: Niche cluster connectivity diagram
 
 
@@ -101,7 +101,7 @@ Niche cluster proportion
 
 
 .. image:: images/Niche_cluster_proportions.png
-  :width: 400
+  :width: 600
   :alt: Niche cluster proportions as a pie plot
 
 
@@ -119,7 +119,7 @@ Cell type distribution in each niche cluster
 
 
 .. image:: images/cell_type_loading_in_niche_clusters.png
-  :width: 400
+  :width: 600
   :alt: Barplot with cell type loadings in niche cluster
 
 
@@ -134,7 +134,7 @@ Cell type distribution in each niche cluster
 
 
 .. image:: images/cell_type_dis_in_niche_clusters.png
-  :width: 400
+  :width: 600
   :alt: Heatmap with cell type distributions in niche cluster
 
 
@@ -149,7 +149,7 @@ Cell type distribution in each niche cluster
 
 
 .. image:: images/cell_type_dis_across_niche_clusters.png
-  :width: 400
+  :width: 600
   :alt: Heatmap with cell type distributions across niche clusters
 
 
@@ -165,7 +165,7 @@ Spatial niche-level NT score distribution
 
 
 .. image:: images/niche_NT_score.png
-  :width: 400
+  :width: 600
   :alt: Niche NT score colormap
 
 
@@ -181,7 +181,7 @@ Spatial cell-level NT score distribution
 
 
 .. image:: images/cell_NT_score.png
-  :width: 400
+  :width: 600
   :alt: Cell NT score colormap
 
 
@@ -200,7 +200,7 @@ Cell-level NT score distribution for each cell type
 
 
 .. image:: images/cell_type_along_NT_score_violin.png
-  :width: 400
+  :width: 600
   :alt: Violin plot with NT score distributions per cell type
 
 

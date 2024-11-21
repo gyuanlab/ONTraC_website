@@ -9,4 +9,3 @@ Contents
 
    niche_clusters
    visualizations
-   tutorials
