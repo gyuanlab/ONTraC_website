@@ -14,7 +14,7 @@ For running this example, download the In Situ Sample 1, Replicate 1
 Data preparation
 -----------------
 
-For this step, we will use the R package Giotto.
+For this step, we will use the R package `Giotto <https://drieslab.github.io/Giotto_website/>`_ .
 
 - Read the Xenium data and create a Giotto object
 
