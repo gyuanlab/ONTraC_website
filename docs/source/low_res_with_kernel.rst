@@ -5,7 +5,7 @@ Download the data
 ------------------
 
 For running this tutorial, download the 10X Genomics Visium mouse brain injury
-dataset `GSE236171<https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236171>`_ 
+dataset `GSE236171 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236171>`_ 
 originally published by `Pham et. al. <https://www.nature.com/articles/s41467-023-43120-6>`_ 
 
 
