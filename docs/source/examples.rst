@@ -11,3 +11,4 @@ Contents
    merfish
    stereo_seq
    xenium
+   low_res_with_kernel
