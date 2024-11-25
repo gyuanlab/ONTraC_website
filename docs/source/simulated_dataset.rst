@@ -60,8 +60,7 @@ Generate the simulated data using Dyngen
    model <- generate_experiment(model)
 
 
-- Add noise. Due to the random nature of the noise, the simulated data will be 
-slightly different each time.
+- Add noise. Due to the random nature of the noise, the simulated data will be slightly different each time.
 
 .. code-block:: console
 
@@ -73,8 +72,7 @@ slightly different each time.
    colData(sce)$sim_time <- ifelse(colData(sce)$sim_time == 0, colData(sce)$sim_time + runif(sum(colData(sce)$sim_time == 0), 0.01, 1), colData(sce)$sim_time)
    colData(sce)
    
-   write.csv(sce@assays@data@listData$counts, 
-   "gene_expression_matrix_of_simulated_data.csv")
+   write.csv(sce@assays@data@listData$counts, "gene_expression_matrix_of_simulated_data.csv")
 
 
 .. code-block:: console
@@ -103,7 +101,8 @@ slightly different each time.
 
 .. code-block:: console
 
-   umap_df$trajectory_1 <- ifelse((umap_df$UMAP2 > 0) | (umap_df$UMAP2 < 0 & umap_df$UMAP1 < 0), 'true', 'false')
+   umap_df$trajectory_1 <- ifelse((umap_df$UMAP2 > 0) | (umap_df$UMAP2 < 0 & umap_df$UMAP1 < 0), 
+   'true', 'false')
 
 
 - Create the 'trajectory_2' column

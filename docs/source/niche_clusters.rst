@@ -1,5 +1,5 @@
-Calculate Niche clusters
-=========================
+Calculating trajectories with ONTraC
+====================================
 
 ONTraC (Ordered Niche Trajectory Construction) is a niche-centered, machine 
 learning method for constructing spatially continuous trajectories. 
