@@ -54,7 +54,7 @@ Spatial niche cluster loadings distribution
     fig, axes = plot_niche_cluster_loadings_dataset_from_anadata(ana_data=ana_data)
     fig.savefig('figures/Spatial_niche_clustering_loadings.png', dpi=100)
 
-.. image:: images/Spatial_niche_clustering_loadings.png
+.. image:: images/visualizations/Spatial_niche_clustering_loadings.png
   :width: 700
   :alt: Spatial niche clustering loadings
 
@@ -69,7 +69,7 @@ Spatial maximum niche cluster distribution
     fig, axes = plot_max_niche_cluster_dataset_from_anadata(ana_data=ana_data)
     fig.savefig('figures/Spatial_max_niche_cluster.png', dpi=300)
 
-.. image:: images/Spatial_max_niche_cluster.png
+.. image:: images/visualizations/Spatial_max_niche_cluster.png
   :width: 700
   :alt: Spatial maximum niche cluster distribution
 
@@ -84,7 +84,7 @@ Niche cluster connectivity
     fig, axes = plot_niche_cluster_connectivity_from_anadata(ana_data=ana_data)
     fig.savefig('figures/Niche_cluster_connectivity.png', dpi=300)
 
-.. image:: images/Niche_cluster_connectivity.png
+.. image:: images/visualizations/Niche_cluster_connectivity.png
   :width: 700
   :alt: Niche cluster connectivity diagram
 
@@ -100,7 +100,7 @@ Niche cluster proportion
     fig.savefig('figures/Niche_cluster_proportions.png', dpi=300)
 
 
-.. image:: images/Niche_cluster_proportions.png
+.. image:: images/visualizations/Niche_cluster_proportions.png
   :width: 700
   :alt: Niche cluster proportions as a pie plot
 
@@ -118,7 +118,7 @@ Cell type distribution in each niche cluster
     g.savefig('figures/cell_type_loading_in_niche_clusters.png', dpi=300)
 
 
-.. image:: images/cell_type_loading_in_niche_clusters.png
+.. image:: images/visualizations/cell_type_loading_in_niche_clusters.png
   :width: 700
   :alt: Barplot with cell type loadings in niche cluster
 
@@ -133,7 +133,7 @@ Cell type distribution in each niche cluster
     fig.savefig('figures/cell_type_dis_in_niche_clusters.png', dpi=300)
 
 
-.. image:: images/cell_type_dis_in_niche_clusters.png
+.. image:: images/visualizations/cell_type_dis_in_niche_clusters.png
   :width: 700
   :alt: Heatmap with cell type distributions in niche cluster
 
@@ -148,7 +148,7 @@ Cell type distribution in each niche cluster
     fig.savefig('figures/cell_type_dis_across_niche_clusters.png', dpi=300)
 
 
-.. image:: images/cell_type_dis_across_niche_clusters.png
+.. image:: images/visualizations/cell_type_dis_across_niche_clusters.png
   :width: 700
   :alt: Heatmap with cell type distributions across niche clusters
 
@@ -164,7 +164,7 @@ Spatial niche-level NT score distribution
     fig.savefig('figures/niche_NT_score.png', dpi=200)
 
 
-.. image:: images/niche_NT_score.png
+.. image:: images/visualizations/niche_NT_score.png
   :width: 700
   :alt: Niche NT score colormap
 
@@ -180,7 +180,7 @@ Spatial cell-level NT score distribution
     fig.savefig('figures/cell_NT_score.png', dpi=200)
 
 
-.. image:: images/cell_NT_score.png
+.. image:: images/visualizations/cell_NT_score.png
   :width: 700
   :alt: Cell NT score colormap
 
@@ -199,7 +199,7 @@ Cell-level NT score distribution for each cell type
     fig.savefig('figures/cell_type_along_NT_score_violin.png', dpi=300)
 
 
-.. image:: images/cell_type_along_NT_score_violin.png
+.. image:: images/visualizations/cell_type_along_NT_score_violin.png
   :width: 700
   :alt: Violin plot with NT score distributions per cell type
 
