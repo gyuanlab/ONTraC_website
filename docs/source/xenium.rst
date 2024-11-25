@@ -4,7 +4,7 @@ Running ONTraC on a Xenium dataset
 Download the data
 ------------------
 
-The human breast cancer Xenium dataset originally published by `Janesick, et al.` <https://www.nature.com/articles/s41467-023-43458-x>`_ 
+The human breast cancer Xenium dataset originally published by `Janesick, et al. <https://www.nature.com/articles/s41467-023-43458-x>`_ 
 is available at `10X genomics <https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast>`_  
 
 For running this example, download the In Situ Sample 1, Replicate 1 
