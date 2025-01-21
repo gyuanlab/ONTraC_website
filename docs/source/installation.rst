@@ -34,7 +34,7 @@ Use this command if you want to visualise the results by `ONTraC_analysis`.
 
 .. code-block:: console
 
-   pip install ONTraC[analysis]
+   pip install "ONTraC[analysis]""
 
 
 Using conda
