@@ -1,4 +1,22 @@
+# build files
+docs/build
+docs/jupyter_execute
+
+# python temp files
+__pycache__
+*.pyc
+
+# r temp files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# jupyter temp files
+.ipynb_checkpoints
+
+# mypy temp files
+.mypy_cache
+
+# macOS temp files
+.DS_Store
