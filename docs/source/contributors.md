@@ -6,6 +6,6 @@
 
 ## Crystal Shin
 
-## Joselyn C. Chávez-Fuentes
+## [Joselyn C. Chávez-Fuentes](https://josschavezf.netlify.app)
 
 ## [Guo-Cheng Yuan](https://labs.icahn.mssm.edu/yuanlab/)
