@@ -9,4 +9,4 @@ Contents
 
    io_files
    niche_clusters
-   visualizations
+   visualization
