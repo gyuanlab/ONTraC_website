@@ -14,7 +14,7 @@ from sphinxawesome_theme import LinkIcon, ThemeOptions
 # -- Project information
 
 project = 'ONTraC'
-copyright = 'Wang et al, 2024'
+copyright = '2024-2025, Guo-Cheng Yuan Lab'
 author = 'Wen Wang, Shiwei Zheng, Crystal Shin, Joselyn Chavez, Guo-Cheng Yuan'
 
 release = '1.0'
@@ -33,7 +33,6 @@ extensions = [
     "sphinx_autodoc_typehints",
     "myst_nb",
     "sphinx_design",
-    "sphinxawesome_theme.highlighting",
 ]
 
 myst_enable_extensions = [
@@ -62,8 +61,8 @@ html_theme = "sphinxawesome_theme"
 
 
 theme_options = ThemeOptions(
-    logo_light="_static/no_image.png",
-    logo_dark="_static/no_image.png",
+    logo_light="images/logo.ico",
+    logo_dark="images/logo_dark.ico",
     show_scrolltop=True,
     show_breadcrumbs=True,
     awesome_external_links=True,
