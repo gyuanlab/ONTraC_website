@@ -46,12 +46,17 @@ properties, niche trajectory analysis provides a coherent framework to study
 coordinated responses from all the cells in association with continuous tissue
 microenvironment variations.
 
+```{image} ../source/images/other/logo_with_text_long.png
+:alt: ONTraC logo
+```
+
 ```{image} ../source/images/other/ONTraC_structure.png
+:alt: ONTraC structure
 ```
 
 Check out the [installation](./installation.rst) for installation guidelines.
 
-Check out the [usage](./usage.rst) for details if you want to use ONTraC with command lines.
+Check out the [usage](./usage.md) for details if you want to use ONTraC with command lines.
 
 Check out the [step-by-step tutorial](./step_by_step_tutorial.ipynb) for details if you want to use ONTraC within a Jupyter notebook.
 
@@ -69,3 +74,17 @@ citation
 ```{note}
 This project is under active development.
 ```
+
+## Interoperability
+
+ONTraC has been incorporated with [Giotto Suite](https://drieslab.github.io/Giotto_website/articles/ontrac.html).
+
+## Citation
+
+**Wang, W.\*, Zheng, S.\*, Shin, C. S., Chávez-Fuentes J. C.  & [Yuan, G. C.](https://labs.icahn.mssm.edu/yuanlab/)$**. [ONTraC characterizes spatially continuous variations of tissue microenvironment through niche trajectory analysi](https://doi.org/10.1186/s13059-025-03588-5). *Genome Biol*, 2025.
+
+## Other Resources
+
+[Reproducible codes](https://github.com/gyuanlab/ONTraC_paper)
+
+[Dataset used in our paper](https://doi.org/10.5281/zenodo.11186619)
