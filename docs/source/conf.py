@@ -26,14 +26,22 @@ version = '1.1.4'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "myst_nb",
+    "sphinx_design",
+    "sphinxcontrib.mermaid",
     "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
     "sphinx.ext.intersphinx",
     "sphinx.ext.autodoc",
     "sphinx_autodoc_typehints",
-    "myst_nb",
-    "sphinx_design",
 ]
+
+# in conf.py, after your extensions list:
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "myst-nb",       # only register .md once
+    ".ipynb": "myst-nb",     # we want notebook files too
+}
 
 myst_enable_extensions = [
     "amsmath",
@@ -46,6 +54,13 @@ myst_enable_extensions = [
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
+html_sidebars = {
+    "**": [
+        "globaltoc.html",   # your normal left nav
+        "searchbox.html",
+        "localtoc.html",    # now a *second* sidebar on the right
+    ]
+}
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -67,8 +82,7 @@ theme_options = ThemeOptions(
     show_breadcrumbs=True,
     awesome_external_links=True,
     main_nav_links={
-        "Installation": "installation",
-        "Usage": "usage",
+        "Home": "index",
         "Tutorials": "tutorials",
         "Examples": "examples",
         #"API": "api", # TODO: Add API page
@@ -94,7 +108,6 @@ html_context = {"default_mode": "auto"}
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-html_css_files = ["custom.css"]
 
 # -- Options for Autosummary, Autodoc, typehints, Napolean docstring format
 
