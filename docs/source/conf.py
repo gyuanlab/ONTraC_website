@@ -85,6 +85,7 @@ theme_options = ThemeOptions(
         "Home": "index",
         "Tutorials": "tutorials",
         "Examples": "examples",
+        "How it works": "how_it_works/index",
         #"API": "api", # TODO: Add API page
         "Contributors": "contributors",
         "Citation": "citation",
