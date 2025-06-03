@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rm -r docs/build/html
+rm -r docs/build
