@@ -3,4 +3,12 @@ sphinx-rtd-theme
 sphinxawesome-theme
 sphinx_autodoc_typehints
 sphinx_design
+sphinxcontrib-mermaid
+sphinxcontrib-apphelp
+sphinxcontrib-devhelp
+sphinxcontrib-htmlhelp
+sphinxcontrib-jsmath
+sphinxcontrib-qthelp
+sphinxcontrib-serializinghtml
 myst_nb
+myst_parser

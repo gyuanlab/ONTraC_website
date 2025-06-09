@@ -40,6 +40,8 @@ extensions = [
 source_suffix = {
     ".rst": "restructuredtext",
     ".md": "myst-nb",       # only register .md once
+    ".rmd": "myst-nb",      # .md and .rmd are the same
+    ".qmd": "myst-nb",      # .qmd is also supported
     ".ipynb": "myst-nb",     # we want notebook files too
 }
 
@@ -50,17 +52,11 @@ myst_enable_extensions = [
     "dollarmath",
     "html_image",
     "html_admonition",
+    "colon_fence",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
-html_sidebars = {
-    "**": [
-        "globaltoc.html",   # your normal left nav
-        "searchbox.html",
-        "localtoc.html",    # now a *second* sidebar on the right
-    ]
-}
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -83,12 +79,14 @@ theme_options = ThemeOptions(
     awesome_external_links=True,
     main_nav_links={
         "Home": "index",
-        "Tutorials": "tutorials",
-        "Examples": "examples",
+        "Installation": "installation",
+        "Tutorials": "tutorials/index",
+        "Examples": "examples/index",
         "How it works": "how_it_works/index",
         #"API": "api", # TODO: Add API page
         "Contributors": "contributors",
         "Citation": "citation",
+        #"FAQ": "faq", # TODO: Add FAQ page
     },
     extra_header_link_icons={
         "GitHub": LinkIcon(
@@ -100,8 +98,6 @@ theme_options = ThemeOptions(
 
 html_theme_options = asdict(theme_options)
 
-html_sidebars = {"**": ["sidebar_main_nav_links.html", "sidebar_toc.html"]}
-
 html_context = {"default_mode": "auto"}
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -109,6 +105,31 @@ html_context = {"default_mode": "auto"}
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
+html_css_files = [
+    "custom.css",
+]
+
+html_js_files = [
+    "custom.js",
+]
+
+# -- conf.py additions --
+
+# Configure myst-nb
+nb_render_priority = {
+    "html": (
+        "outputs.HTMLOutput",
+        "execute_result",
+        "display_data",
+        "text/plain",
+        "text/html",
+        "text/latex",
+        "image/svg+xml",
+        "image/png",
+        "image/jpeg",
+        "application/json"
+    )
+}
 
 # -- Options for Autosummary, Autodoc, typehints, Napolean docstring format
 

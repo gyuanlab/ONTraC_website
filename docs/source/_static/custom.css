@@ -1,0 +1,211 @@
+/* ── Number the headings in the main content area ── */
+#content {
+  counter-reset: section; /* reset at the top of each page */
+}
+
+/* H1: "Title" */
+#content h1 {
+  counter-increment: section;
+  counter-reset: subsection; /* reset subsections */
+  position: relative;
+  margin-left: 0em;
+}
+
+/* H2: "1. Subtitle" */
+#content h2 {
+  counter-increment: subsection;
+  counter-reset: subsubsection; /* reset subsubsections */
+  position: relative;
+  margin-left: 1em;
+}
+#content h2::before {
+  content: counter(subsection) ".";
+  position: absolute;
+  left: -1em;
+}
+
+/* H3: "1.1 Sub-subtitle" */
+#content h3 {
+  counter-increment: subsubsection;
+  counter-reset: subsubsubsection; /* reset subsubsubsections */
+  position: relative;
+  margin-left: 1.75em;
+}
+#content h3::before {
+  content: counter(subsection) "." counter(subsubsection);
+  position: absolute;
+  left: -1.75em;
+}
+
+/* H4: "1.1.1 Sub-sub-subtitle" */
+#content h4 {
+  counter-increment: subsubsubsection;
+  counter-reset: subsubsubsubsection;
+  position: relative;
+  margin-left: 2.5em;
+}
+#content h4::before {
+  content: counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection);
+  position: absolute;
+  left: -2.5em;
+}
+
+/* H5: "1.1.1.1 Sub-sub-subtitle" */
+#content h5 {
+  counter-increment: subsubsubsubsection;
+  counter-reset: subsubsubsubsubsection;
+  position: relative;
+  margin-left: 3.5em;
+}
+#content h5::before {
+  content: counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) "." counter(subsubsubsubsection);
+  position: absolute;
+  left: -3.5em;
+}
+
+/* ── Number the “On this page” TOC on the right sidebar ── */
+
+/* 1) Reset the top‐level counter for each page */
+#right-sidebar ul {
+  counter-reset: localtoc1;
+  list-style: none; /* remove bullets */
+  padding-left: 0;  /* remove default ul indent */
+}
+
+/* 2) Number first‐level items (the h2’s, h3’s, etc.) */
+#right-sidebar ul > li {
+  counter-increment: localtoc1;
+  position: relative;
+  margin-left: 1.5em; /* make room for the number */
+}
+
+#right-sidebar ul > li::before {
+  content: counter(localtoc1) ". ";
+  position: absolute;
+  left: -1em;
+}
+
+/* 3) If there are nested sub‐sections, number them “1.1”, “1.2”, etc. */
+#right-sidebar ul ul {
+  counter-reset: localtoc2;
+  list-style: none;
+  padding-left: 0;
+}
+
+#right-sidebar ul ul > li {
+  counter-increment: localtoc2;
+  position: relative;
+  margin-left: 0.75em; /* indent deeper */
+}
+
+#right-sidebar ul ul > li::before {
+  content: counter(localtoc1) "." counter(localtoc2) " ";
+  position: absolute;
+  left: -1.75em;
+}
+
+/* 4) For a third level (if you happen to have <ul><ul><ul>…), do the same: */
+#right-sidebar ul ul ul {
+  counter-reset: localtoc3;
+  list-style: none;
+  padding-left: 0;
+}
+
+#right-sidebar ul ul ul > li {
+  counter-increment: localtoc3;
+  position: relative;
+  margin-left: 1.5em;
+}
+
+#right-sidebar ul ul ul > li::before {
+  content:
+    counter(localtoc1) "."
+    counter(localtoc2) "."
+    counter(localtoc3) " ";
+  position: absolute;
+  left: -2.5em;
+}
+
+/* 5) For a fourth level, do the same: */
+#right-sidebar ul ul ul ul {
+  counter-reset: localtoc4;
+  list-style: none;
+  padding-left: 0;
+}
+
+#right-sidebar ul ul ul ul > li {
+  counter-increment: localtoc4;
+  position: relative;
+  margin-left: 2.5em;
+}
+
+#right-sidebar ul ul ul ul > li::before {
+  content:
+    counter(localtoc1) "."
+    counter(localtoc2) "."
+    counter(localtoc3) "."
+    counter(localtoc4) " ";
+  position: absolute;
+  left: -3.5em;
+}
+
+/* ── Update cell styles for myst-nb ── */
+/* ── Enhanced cell styles ── */
+.input-cell .cell_input {
+  background: #f7f7f7 !important;
+  border-left: 4px solid #388E3C !important;
+  border-radius: 0 !important;
+  padding: 0.5em 1em !important;
+  margin-bottom: 0 !important;
+}
+
+.output-cell .cell_output {
+  background: #fafafa !important;
+  border-left: 4px solid #1976D2 !important;
+  border-radius: 0 !important;
+  padding: 0.5em 1em !important;
+  margin-top: 0 !important;
+}
+
+/* Style for code blocks in output */
+.output-cell .cell_output div.highlight {
+  background: #fafafa !important;
+  border: none !important;
+}
+
+/* Remove background from input code blocks */
+.input-cell .cell_input div.highlight {
+  background: none !important;
+  padding: 0 !important;
+}
+
+/* Folding styles */
+.folded-output {
+  background: #fafafa !important;
+  border-left: 4px solid #1976D2 !important;
+  margin-top: 0.5rem !important;
+  padding: 0.5em 1em !important;
+}
+
+.folded-summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #1976D2;
+}
+
+.folded-summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s;
+  font-size: 0.8em;
+}
+
+details[open] > .folded-summary::before {
+  transform: rotate(90deg);
+}
+
+/* Add margin between cells */
+div.cell + div.cell {
+  margin-top: 1.5rem !important;
+}

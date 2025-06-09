@@ -1,14 +1,14 @@
 # Installation and Setup
 
-This document guides you through the process of installing ONTraC (Ordered Niche Trajectory Construction) and setting up your environment for spatial omics data analysis. For information about key concepts and terminology used in ONTraC, see Key Concepts and Terminology.
+This tutorial walks you through installing ONTraC (Ordered Niche Trajectory Construction) and confuguring your environment for spatial omics data analysis.
 
 ## System Requirements
 
-ONTraC is compatible with following systems:
+ONTraC supports following systems:
 
 - Operating Systems: Linux, macOS, and Windows
 - Python Versions: 3.10, 3.11, and 3.12
-- Optional: CUDA-capable GPU for accelerated processing (recommended for large datasets)
+- Optional: CUDA-capable GPU for faster processing (recommended for large datasets)
 
 ```{mermaid}
 flowchart LR
@@ -35,7 +35,7 @@ flowchart LR
 
 ## GPU Configuration
 
-ONTraC can utilize GPU acceleration via CUDA for faster processing. If a CUDA-capable GPU is not available, ONTraC will run on CPU.
+ONTraC can utilize GPU acceleration via CUDA for faster processing. If a CUDA-capable GPU is not available, ONTraC will run on the CPU.
 
 The following PyTorch CUDA versions are supported:
 
@@ -43,22 +43,33 @@ The following PyTorch CUDA versions are supported:
 - cu124 (CUDA 12.4)
 - cu126 (CUDA 12.6)
 
-Please refer to the [official website](https://docs.nvidia.com/cuda/) for CUDA installation instructions.
+Please refer to the [official CUDA website](https://docs.nvidia.com/cuda/) for CUDA installation instructions.
 
-## Installation Methods
+```{note}
+Please use `nvidia-smi` to check CUDA installation status.
+```
 
-ONTraC can be installed using pip. Choose the method that best fits your workflow.
+## Installation
 
-### Step1: Create and Activat a Conda Environment (Optional but Recommended)
+ONTraC can be installed using pip. Choose the installation method that best suits your workflow.
+
+### Step 0: Clear Cache (Optional but Recommended)
+
+```sh
+pip cache purge
+conda clean -a -y
+```
+
+### Step 1: Create and Activate a Conda Environment (Optional but Recommended)
 
 ```bash
 conda create -y -n ONTraC python=3.11
 conda activate ONTraC
 ```
 
-### Step2: Install ONTraC
+### Step 2: Install ONTraC
 
-#### Option1: Install Stable Version using Pip
+#### Option 1: Install Stable Version using pip
 
 For basic functionality:
 
@@ -90,7 +101,7 @@ For all capabilities:
 pip install "ONTraC[all]"
 ```
 
-#### Option2: Install Developing Version from GitHub
+#### Option 2: Install the Development Version from GitHub
 
 For the latest developing version:
 
@@ -108,7 +119,7 @@ pip install ".[dev]"
 pip install ".[all]"
 ```
 
-### Step3 Setting Up Jupyter (Optional but Recommended)
+### Step 3: Set Up Jupyter (Optional but Recommended)
 
 If you plan to use ONTraC with Jupyter notebooks, add the ONTraC environment as a new kernel:
 
@@ -117,56 +128,38 @@ pip install ipykernel
 python -m ipykernel install --user --name ONTraC --display-name "Python 3.11 (ONTraC)"
 ```
 
-## Dependencies and Component Structure
+### Step 4: Test
 
-ONTraC has several core dependencies that are automatically installed during the installation process:
+#### CUDA Availability Test (Optional)
 
-```{mermaid}
-flowchart LR
-subgraph A["ONTraC Dependencies Structure"]
-  subgraph B1["Core Dependencies"]
-    B11[Pytorch]
-    B12["PyTroch Geometric (PYG)"]
-    B13(Pandas)
-    B14(pyyaml)
-    B15(scipy)
-  end
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
 
-  subgraph B2["Analysis Dependencies (Optional)"]
-    B21[matplotlib]
-    B22[seaborn]
-  end
+```{note}
+Please refer to the [official PyTorch website](https://pytorch.org/get-started/locally/) for PyTorch installation instructions.
+```
 
-  C1[ONTraC]
-  C2["ONTraC analysis"]
+#### ONTraC Installation Test
 
-  subgraph D["ONTraC Components"]
-    subgraph E["Running Components"]
-      E1("ONTraC_NN
-      (Niche Network)")
-      E2("ONTraC_GNN
-      (Graph Neural Network)")
-      E3("ONTraC_NT
-      (Niche Trajectory)")
-    end
+```{code-cell}
+:class: input-cell
 
-    subgraph F["Analysis Components"]
-      F1("ONTraC_analysis
-      (Visualization)")
-    end
-  end
-end
-B11 --> C1
-B12 --> C1
-B13 --> C1
-B14 --> C1
-B15 --> C1
-B12 --> C1
-B21 --> C2
-B22 --> C2
-C1 --> E1
-C1 --> E2
-C1 --> E3
-C1 --> F1
-C2 --> F1
+python -c "import ONTraC; ONTraC.utils.write_version_info()"
+```
+
+```{code-block}
+:class: output-cell
+
+##################################################################################
+
+         ▄▄█▀▀██   ▀█▄   ▀█▀ █▀▀██▀▀█                   ▄▄█▀▀▀▄█
+        ▄█▀    ██   █▀█   █     ██    ▄▄▄ ▄▄   ▄▄▄▄   ▄█▀     ▀
+        ██      ██  █ ▀█▄ █     ██     ██▀ ▀▀ ▀▀ ▄██  ██
+        ▀█▄     ██  █   ███     ██     ██     ▄█▀ ██  ▀█▄      ▄
+         ▀▀█▄▄▄█▀  ▄█▄   ▀█    ▄██▄   ▄██▄    ▀█▄▄▀█▀  ▀▀█▄▄▄▄▀
+
+                        version: 1.2.0
+
+##################################################################################
 ```
