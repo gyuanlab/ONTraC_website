@@ -82,7 +82,7 @@ ONTraC \
 ```
 
 - See the [Command Line Interface Tutorial](./tutorials/command_line.md) for using ONTraC via command line.
-- For Jupyter-based usage, refer to the [Interactive Tutorial](./tutorials/step_by_step_tutorial.ipynb).
+- For Jupyter-based usage, refer to the [Interactive Tutorial](./tutorials/interactive.ipynb).
 
 ### Visualization
 
@@ -96,7 +96,7 @@ ONTraC_analysis \
     -r
 ```
 
-- See the [Visualization Tutorial](./tutorials/visualization.md) for more details.
+- See the [Visualization Tutorial](./tutorials/visualization.ipynb) for more details.
 
 ```{note}
 This project is actively maintained and under active development.

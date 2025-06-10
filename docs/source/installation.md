@@ -142,7 +142,7 @@ Please refer to the [official PyTorch website](https://pytorch.org/get-started/l
 
 #### ONTraC Installation Test
 
-```{code-cell}
+```{code-block}
 :class: input-cell
 
 python -c "import ONTraC; ONTraC.utils.write_version_info()"

@@ -19,7 +19,7 @@ ONTraC generate `niche cluster` an assignment matrix as an intermediate result. 
 
 ### Install required packages and ONTraC
 
-Please see the [installation tutorial](installation.md)
+Please see the [Installation Tutorial](../installation.md)
 
 ### Running ONTraC
 

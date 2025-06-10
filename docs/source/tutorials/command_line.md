@@ -5449,7 +5449,7 @@ Please refer to the [Parameters Explanation](./parameters.md) for details about 
 ```
 
 ```{note}
-Please refer to the [IO Files Explanation](./tutorials/IO_files.md) for details of input and output files.
+Please refer to the [IO Files Explanation](./IO_files.md) for details of input and output files.
 ```
 
 ## Visualization
