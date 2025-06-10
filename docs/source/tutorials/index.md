@@ -5,6 +5,7 @@
 - See the [command line tutorial](./command_line.md) for details if you want use ONTraC in command line mode.
 - See the [interactive tutorial](./interactive.ipynb) for details if you want use ONTraC in a jupyter notebook.
 - See the [interoperate with Giotto tutorial](https://drieslab.github.io/Giotto_website/articles/ontrac.html) for details if you want use ONTraC within Giotto ecosystem.
+- See the [IO files tutorial](./IO_files.md) for details of input file and output files.
 
 ## Downstream Analysis
 
