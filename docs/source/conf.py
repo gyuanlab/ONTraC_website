@@ -17,8 +17,8 @@ project = 'ONTraC'
 copyright = '2024-2025, Guo-Cheng Yuan Lab'
 author = 'Wen Wang, Shiwei Zheng, Crystal Shin, Joselyn Chavez, Guo-Cheng Yuan'
 
-release = '1.0'
-version = '1.1.4'
+release = '1.2'
+version = '1.2.1'
 
 # -- General configuration
 
