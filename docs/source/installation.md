@@ -33,6 +33,10 @@ flowchart LR
   end
 ```
 
+```{note}
+No 
+```
+
 ## GPU Configuration
 
 ONTraC can utilize GPU acceleration via CUDA for faster processing. If a CUDA-capable GPU is not available, ONTraC will run on the CPU.
@@ -40,14 +44,10 @@ ONTraC can utilize GPU acceleration via CUDA for faster processing. If a CUDA-ca
 The following PyTorch CUDA versions are supported:
 
 - cu118 (CUDA 11.8)
-- cu124 (CUDA 12.4)
 - cu126 (CUDA 12.6)
+- cu128 (CUDA 12.8)
 
 Please refer to the [official CUDA website](https://docs.nvidia.com/cuda/) for CUDA installation instructions.
-
-```{note}
-Please use `nvidia-smi` to check CUDA installation status.
-```
 
 ## Installation
 
@@ -65,6 +65,18 @@ conda clean -a -y
 ```bash
 conda create -y -n ONTraC python=3.11
 conda activate ONTraC
+```
+
+#### Install Optional Dependencies for PyG (Only works on CUDA-capable GPU)
+
+```bash
+pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.7.0+cu126.html
+# or
+pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.7.0+cu128.html
+# based on your CUDA version
+# or
+pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.7.0+cpu.html
+# for macOS and non-CUDA-capable GPU system
 ```
 
 ### Step 2: Install ONTraC
