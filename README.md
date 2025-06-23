@@ -11,7 +11,7 @@ representation of the tissue microenvironment continuum. By disentangling cell-l
 level properties, niche trajectory analysis provides a coherent framework to study coordinated
 responses from all the cells in association with continuous tissue microenvironment variations.
 
-![logo](docs/source/_static/images/logo_with_text_long.png)
+![logo](docs/source/images/logo_with_text_long.png)
 ![ONTraC Structure](docs/source/images/other/ONTraC_structure.png)
 
 ## Installation
