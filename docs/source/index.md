@@ -10,9 +10,6 @@
   <a href="https://pepy.tech/project/ONTraC">
     <img src="https://static.pepy.tech/badge/ONTraC" alt="Downloads" style="display:inline-block;">
   </a>
-  <a href="https://pypi.org/project/ONTraC/">
-    <img src="https://img.shields.io/pypi/dm/ONTraC.svg" alt="PyPI Downloads" style="display:inline-block;">
-  </a>
   <a href="https://github.com/gyuanlab/ONTraC">
     <img src="https://badgen.net/github/stars/gyuanlab/ONTraC" alt="GitHub Stars" style="display:inline-block;">
   </a>
