@@ -33,10 +33,6 @@ flowchart LR
   end
 ```
 
-```{note}
-No 
-```
-
 ## GPU Configuration
 
 ONTraC can utilize GPU acceleration via CUDA for faster processing. If a CUDA-capable GPU is not available, ONTraC will run on the CPU.
