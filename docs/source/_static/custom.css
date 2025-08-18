@@ -209,3 +209,25 @@ details[open] > .folded-summary::before {
 div.cell + div.cell {
   margin-top: 1.5rem !important;
 }
+
+/* Make pandas/Jupyter tables scroll instead of squish */
+#content .cell_output.docutils.container table {
+  display: block;          /* detach from flow so overflow works */
+  overflow-x: auto;        /* horizontal scrollbar */
+  width: max-content;      /* keep natural width */
+  max-width: 100%;         /* but don’t exceed container */
+  border-collapse: collapse;
+}
+
+/* Don’t wrap cell text; keep rows compact */
+#content .cell_output.docutils.container table th,
+#content .cell_output.docutils.container table td {
+  white-space: nowrap;     /* critical: avoid wrapping inside cells */
+  vertical-align: top;
+}
+
+/* If text outputs appear smashed: allow horizontal scroll */
+#content .cell_output.docutils.container pre {
+  overflow-x: auto;
+  white-space: pre;        /* keep monospace alignment */
+}
