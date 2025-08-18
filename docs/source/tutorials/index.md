@@ -26,6 +26,13 @@ See [spatial trajectory-based analysis tutorial](./st_based_analysis.ipynb) for 
 
 Niche clusters is one of the intermediate results of ONTraC, if you want treat it as a spatial clustering results, please follow [niche cluster tutorial](./niche_cluster.md).
 
+## Multiple Samples
+
+ONTraC can generate consistent spatial trajectories (NT score) across multiple slices/samples.
+
+Here is a [demonstration example](./multisamples.ipynb) using MERFISH mouse primay motor cortex dataset.
+
+
 ## Others
 
 ### Parameters
