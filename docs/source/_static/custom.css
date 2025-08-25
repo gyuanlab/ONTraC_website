@@ -71,103 +71,68 @@
   text-align: right;
 }
 
+
 /* ── Number the “On this page” TOC on the right sidebar ── */
 
-/* 1) Reset the top‐level counter for each page */
-#right-sidebar ul {
-  counter-reset: localtoc1;
-  list-style: none; /* remove bullets */
-  padding-left: 0;  /* remove default ul indent */
+/* Reset counters (keep as you had) */
+#right-sidebar ul            { counter-reset: l1; list-style:none; padding-left:0; margin:0; }
+#right-sidebar ul ul         { counter-reset: l2; list-style:none; padding-left:0; margin:0; }
+#right-sidebar ul ul ul      { counter-reset: l3; list-style:none; padding-left:0; margin:0; }
+#right-sidebar ul ul ul ul   { counter-reset: l4; list-style:none; padding-left:0; margin:0; }
+
+/* Common: two‑column grid per item; column 1 = number, column 2 = text */
+#right-sidebar li {
+  display: grid;
+  grid-template-columns: 2.6em 1fr;   /* level 1 default; deeper levels override */
+  column-gap: .6em;
+  align-items: start;
+  margin: .22em 0;
 }
 
-/* 2) Number first‐level items (the h2’s, h3’s, etc.) */
-#right-sidebar ul > li {
-  counter-increment: localtoc1;
-  position: relative;
-  margin-left: 1.5em; /* make room for the number */
+/* Make the pseudo‑element (number) live in column 1 */
+#right-sidebar li::before { grid-column: 1; text-align: right; white-space: nowrap; }
+
+/* Make the link fill column 2 and wrap nicely */
+#right-sidebar li > a {
+  grid-column: 2;
+  display: block;
+  word-break: normal;           /* don't break inside words */
+  overflow-wrap: break-word;    /* break long words if needed */
+  hyphens: auto;                /* optional: prettier long-word breaks */
+  line-height: 1.25;
 }
 
-#right-sidebar ul > li::before {
-  content: counter(localtoc1) ". ";
-  display: inline-block;
-  min-width: 2em;
-  margin-left: -2em;
-  text-align: right;
-  vertical-align: baseline;
-}
+/* Level 1 */
+#right-sidebar ul > li       { counter-increment: l1; }
+#right-sidebar ul > li::before { content: counter(l1) "."; }
 
-/* 3) If there are nested sub‐sections, number them “1.1”, “1.2”, etc. */
-#right-sidebar ul ul {
-  counter-reset: localtoc2;
-  list-style: none;
-  padding-left: 0;
-}
-
+/* Level 2 */
 #right-sidebar ul ul > li {
-  counter-increment: localtoc2;
-  position: relative;
-  margin-left: 0.75em; /* indent deeper */
+  grid-template-columns: 3.6em 1fr;   /* wider number column for 10.12 etc. */
+  counter-increment: l2;
 }
-
 #right-sidebar ul ul > li::before {
-  content: counter(localtoc1) "." counter(localtoc2) " ";
-  display: inline-block;
-  min-width: 3em;
-  margin-left: -3em;
-  text-align: right;
-  vertical-align: baseline;
+  content: counter(l1) "." counter(l2);
 }
 
-/* 4) For a third level (if you happen to have <ul><ul><ul>…), do the same: */
-#right-sidebar ul ul ul {
-  counter-reset: localtoc3;
-  list-style: none;
-  padding-left: 0;
-}
-
+/* Level 3 */
 #right-sidebar ul ul ul > li {
-  counter-increment: localtoc3;
-  position: relative;
-  margin-left: 1.5em;
+  grid-template-columns: 4.6em 1fr;
+  counter-increment: l3;
 }
-
 #right-sidebar ul ul ul > li::before {
-  content:
-    counter(localtoc1) "."
-    counter(localtoc2) "."
-    counter(localtoc3) " ";
-  display: inline-block;
-  min-width: 4em;
-  margin-left: -4em;
-  text-align: right;
-  vertical-align: baseline;
+  content: counter(l1) "." counter(l2) "." counter(l3);
 }
 
-/* 5) For a fourth level, do the same: */
-#right-sidebar ul ul ul ul {
-  counter-reset: localtoc4;
-  list-style: none;
-  padding-left: 0;
-}
-
+/* Level 4 */
 #right-sidebar ul ul ul ul > li {
-  counter-increment: localtoc4;
-  position: relative;
-  margin-left: 2.5em;
+  grid-template-columns: 5.6em 1fr;
+  counter-increment: l4;
+}
+#right-sidebar ul ul ul ul > li::before {
+  content: counter(l1) "." counter(l2) "." counter(l3) "." counter(l4);
 }
 
-#right-sidebar ul ul ul ul > li::before {
-  content:
-    counter(localtoc1) "."
-    counter(localtoc2) "."
-    counter(localtoc3) " "
-    counter(localtoc4) " ";
-  display: inline-block;
-  min-width: 5em;
-  margin-left: -5em;
-  text-align: right;
-  vertical-align: baseline;
-}
 
 /* ── Update cell styles for myst-nb ── */
 /* ── Enhanced cell styles ── */
