@@ -72,8 +72,6 @@
 }
 
 
-/* ── Number the “On this page” TOC on the right sidebar ── */
-
 /* Reset counters (keep as you had) */
 #right-sidebar ul            { counter-reset: l1; list-style:none; padding-left:0; margin:0; }
 #right-sidebar ul ul         { counter-reset: l2; list-style:none; padding-left:0; margin:0; }
@@ -83,10 +81,10 @@
 /* Common: two‑column grid per item; column 1 = number, column 2 = text */
 #right-sidebar li {
   display: grid;
-  grid-template-columns: 2.6em 1fr;   /* level 1 default; deeper levels override */
-  column-gap: .6em;
+  grid-template-columns: 0 19em;   /* level 1 default; deeper levels override */
+  column-gap: 1.5em;
   align-items: start;
-  margin: .22em 0;
+  margin: .05em;
 }
 
 /* Make the pseudo‑element (number) live in column 1 */
@@ -103,12 +101,18 @@
 }
 
 /* Level 1 */
-#right-sidebar ul > li       { counter-increment: l1; }
-#right-sidebar ul > li::before { content: counter(l1) "."; }
+#right-sidebar ul > li {
+  grid-template-columns: 0.5 18.5em;   /* level 1 default; deeper levels override */
+  counter-increment: l1;
+}
+
+#right-sidebar ul > li::before {
+  content: counter(l1) ".";
+}
 
 /* Level 2 */
 #right-sidebar ul ul > li {
-  grid-template-columns: 3.6em 1fr;   /* wider number column for 10.12 etc. */
+  grid-template-columns: 1em 17.5em;   /* wider number column for 10.12 etc. */
   counter-increment: l2;
 }
 #right-sidebar ul ul > li::before {
@@ -117,7 +121,7 @@
 
 /* Level 3 */
 #right-sidebar ul ul ul > li {
-  grid-template-columns: 4.6em 1fr;
+  grid-template-columns: 3em 15em;
   counter-increment: l3;
 }
 #right-sidebar ul ul ul > li::before {
@@ -126,12 +130,13 @@
 
 /* Level 4 */
 #right-sidebar ul ul ul ul > li {
-  grid-template-columns: 5.6em 1fr;
+  grid-template-columns: 4em 15em;
   counter-increment: l4;
 }
 #right-sidebar ul ul ul ul > li::before {
   content: counter(l1) "." counter(l2) "." counter(l3) "." counter(l4);
 }
+
 
 
 /* ── Update cell styles for myst-nb ── */
