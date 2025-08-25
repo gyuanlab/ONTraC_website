@@ -18,7 +18,7 @@ copyright = '2024-2025, Guo-Cheng Yuan Lab'
 author = 'Wen Wang, Shiwei Zheng, Crystal Shin, Joselyn Chavez, Guo-Cheng Yuan'
 
 release = '1.2'
-version = '1.2.1'
+version = '1.2.2'
 
 # -- General configuration
 
